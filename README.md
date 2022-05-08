@@ -1,6 +1,15 @@
 # FindAlias
 
-A mix task that prints the location of alias.
+A mix task that prints the filename and the line number of alias.
+
+Searching for the full alias name in a project which use multi alias is difficult.
+
+For eg:
+
+```
+alias ModA.{ModB, ModC}
+```
+
 
 ## Installation
 
