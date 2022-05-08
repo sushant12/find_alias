@@ -63,8 +63,6 @@ defmodule Mix.Tasks.FindAlias do
   defp pretty_print([]), do: ""
 
   defp pretty_print(module_map) do
-    Enum.each(module_map, fn abc ->
-      IO.puts("#{abc.path}:#{abc.line_number}")
-    end)
+    Enum.each(module_map, &IO.puts("#{&1.path}:#{&1.line_number}"))
   end
 end
