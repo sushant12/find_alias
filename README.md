@@ -1,21 +1,13 @@
 # FindAlias
 
-**TODO: Add description**
+A mix task that prints the location of alias.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `find_alias` to your list of dependencies in `mix.exs`:
+`mix archive.install github sushant12/find_alias`
 
-```elixir
-def deps do
-  [
-    {:find_alias, "~> 0.1.0"}
-  ]
-end
+## Usage
+
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/find_alias>.
-
+mix find_alias MyApp.ModuleName --dir lib
+```
