@@ -3,7 +3,7 @@ defmodule Mix.Tasks.FindAlias do
 
   def run(args) do
     {[dir: directory], [module]} = OptionParser.parse!(args, strict: [dir: :string])
-    module = Module.safe_concat([module])
+    module = Module.concat([module])
 
     get_files(directory)
     |> Enum.map(&search(&1, module))
@@ -53,7 +53,7 @@ defmodule Mix.Tasks.FindAlias do
   end
 
   defp concat_module_name(module_map, module) do
-    Map.update(module_map, :name, [], &Module.safe_concat(module ++ &1))
+    Map.update(module_map, :name, [], &Module.concat(module ++ &1))
   end
 
   defp append_file_path(module_map, file_path) do
